@@ -28,17 +28,27 @@ var pesoEhValido = true;
 var alturaEhValida = true;
 
     if(peso <= 0 || peso >= 1000){
+        //adicionaldo falso caso ela nao atenda a condição do if
         console.log("Peso inválido");
         pesoEhValido = false;
         tdImc.textContent = "Peso inválido!";
-        //adicionaldo falso caso ela nao atenda a condição do if
+        // adicionando o color a linha paciente
+        // paciente.style.color = "red";
+
+        // adicionando cor de fundo pro paciente.
+        // style.backgroundColor = "Lightcoral";
+
+        //  adicionando uma nova classe ao paciente
+        paciente.classList.add("paciente-invalido");
     }
 
     if(altura <= 0 || altura >= 3.00){
+        //adicionaldo falso caso ela nao atenda a condição do if
         console.log("Altura inválida");
         alturaEhValida = false;
         tdImc.textContent = "Altura inválida!";
-        //adicionaldo falso caso ela nao atenda a condição do if
+        
+        paciente.classList.add("paciente-invalido");
     }
  
     if(alturaEhValida && pesoEhValido){
