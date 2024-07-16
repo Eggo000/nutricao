@@ -52,12 +52,32 @@ var alturaEhValida = true;
     }
  
     if(alturaEhValida && pesoEhValido){
-        var imc = peso / (altura * altura); 
-        tdImc.textContent = imc.toFixed(2);
+        var imc = calculaImc(peso,altura); 
+        tdImc.textContent = imc;
     }
 
 }
 
+
+function calculaImc(peso,altura){
+     var imc = 0;
+
+     imc = peso / (altura * altura);
+
+     return imc.toFixed(2);
+}
+
+
+// chamando função de mandeira anonima
+// titulo.addEventListener("click", function(){
+//     console.log("Olha só posso chamar função anonima");
+// });
+
+
+// Criandando função de mensagem
+// function mostraMensagem(){
+//     console.log("Olá eu fui clicado!");
+// }
 
 console.log(paciente); // tr
 console.log(tdPeso); //td que tem o peso
